@@ -123,6 +123,9 @@ if [ `uname` = Darwin ]; then
 		;;
 	esac
 	rm -f ./a.out
+
+        # On Darwin we can build fontsrv
+        echo "FONTSRV=fontsrv" >>$PLAN9/config
 fi
 
 if [ `uname` != Darwin ]; then
